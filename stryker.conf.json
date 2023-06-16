@@ -1,0 +1,23 @@
+{
+    "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+    "_comment": "This config was generated using 'stryker init'. Please take a look at: https://stryker-mutator.io/docs/stryker-js/configuration/ for more information.",
+    "packageManager": "npm",
+    "mutate": [ 
+      "packages/**/src/**/*.ts"
+    ],
+    "reporters": [
+      "html",
+      "clear-text",
+      "progress"
+    ],
+    "testRunner": "vitest",
+    "vitest": {
+      "configFile": "vite.config.ts"
+    },
+    "coverageAnalysis": "off",
+    "thresholds": {
+      "high": 80,
+      "low": 60,
+      "break": 40
+    }
+  }

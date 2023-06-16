@@ -1,0 +1,14 @@
+{
+  "name": "@api-auth-jwt-cognito-user-pool/core",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "vitest": "^0.31.4",
+    "@types/node": "^20.1.4",
+    "sst": "^2.8.22"
+  }
+}

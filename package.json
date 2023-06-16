@@ -1,0 +1,28 @@
+{
+  "name": "api-auth-jwt-cognito-user-pool",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:mutations": "stryker run  --inPlace --logLevel warn"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^7.0.2",
+    "@stryker-mutator/vitest-runner": "^7.0.2",
+    "@tsconfig/node16": "^1.0.4",
+    "aws-cdk-lib": "2.84.0",
+    "constructs": "10.1.156",
+    "sst": "^2.11.17",
+    "typescript": "^5.0.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
