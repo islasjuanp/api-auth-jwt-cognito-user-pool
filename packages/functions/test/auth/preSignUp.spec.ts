@@ -68,16 +68,16 @@ describe('Pre Sign Up function', () => {
     )
   })
 
-  test.each(['user@gmail.com', 'user@outlook.com'])(
+  test.each(['user@example.com', 'user@ex.com'])(
     'Should deny user creation when using Sign Up trigger (%s)',
-    (email) => {
+    async (email) => {
       const event: PreSignUpTriggerEvent = createTestPreSignUpEvent(
         email,
         'PreSignUp_SignUp'
       )
       const context: Context = createTestContext()
 
-      expect(handler(event, context)).rejects.toEqual(
+      await expect(handler(event, context)).rejects.toEqual(
         new Error('Unauthorized to create account')
       )
     }
